@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container center">
+    <div class="content-box">
+        <ul>
+            {% for r in recipes %}
+            <li>
+                <div class="article">
+                    <p class="first">Автор: {{ r.author.username|default:'неизвестен' }}</p>
+                    <p class="last">Дата: {{ r.time_update|date:'d-m-Y H:i:s' }}</p>
+                </div>
+                {% if r.photo %}
+                <p><img class="img-recipe thumb" src="{{ r.photo.url }}"></p>
+                {% endif %}
+                <h2>{{ r.title }}</h2>
+                <p>{{ r.description|linebreaks|truncatewords:50 }}</p>
+                <button class="content__btn"><a href="{% url 'recipe' r.id %}">Читать рецепт</a></button>
+                <div class="clear"></div>
+                {% if not forloop.last %}
+                <hr>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block category %} {% endblock %}
+
+{% block content %}
+<div class="recipe center">
+      <h2>{{ recipe.title }}</h2>
+      {% if recipe.photo %}
+            <p><img class="img-recipe" src="{{ recipe.photo.url }}"></p>
+      {% endif %}
+      <h4>Описание:</h4>
+      <p>{{ recipe.description }}</p>
+      <h4>Время приготовления:</h4>
+      <p>{{ recipe.cooking_time }}</p>
+      <h4>Приготовление:</h4>
+      <p>{{ recipe.cooking_steps|linebreaks }}</p>
+      <button class="change__btn"><a href="{% url 'update_recipe' recipe.id %}">Изменить</a></button>
+      <form id="deleteForm{{ recipe.id }}" action="{% url 'delete_recipe' recipe.id %}" method="post" style="display: inline;">
+      {% csrf_token %}
+      <button type="submit" class="delete__btn">Удалить</button>
+      </form>
+</div>
+{% endblock %}

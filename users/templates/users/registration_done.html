@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block category %} {% endblock %}
+
+{% block content %}
+<div class="welcome center">
+    <h2>Добро пожаловать!</h2>
+    <p>Вы успешно зарегистрировались на сайте! Для продолжения необходимо авторизоваться на сайте по <a href="{% url 'users:login' %}">ссылке</a></p>
+</div>
+{% endblock %}

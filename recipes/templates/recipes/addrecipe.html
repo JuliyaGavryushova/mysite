@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block category %} {% endblock %}
+
+{% block content %}
+<div class="add-recipe center">
+    <h2>Добавление нового рецепта</h2>
+<!--    <form action="" method="post" enctype="multipart/form-data">-->
+<!--        {% csrf_token %}-->
+<!--        {{ form.as_p }}-->
+<!--        <button type="submit" class="add-btn">Отправить</button>-->
+<!--    </form>-->
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for f in form %}
+        <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+        {% endfor %}
+        <p><button type="submit" class="add-btn">Отправить</button></p>
+    </form>
+</div>
+{% endblock %}

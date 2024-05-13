@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block category %} {% endblock %}
+
+{% block content %}
+<div class="registration center">
+    <h2>Регистрация</h2>
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+<!--        <input type="hidden" name="next" value="{{ next }}" />-->
+<!--        {{ form.as_p }}-->
+<!--        <button type="submit" class="reg-btn">Регистрация</button>-->
+<!--    </form>-->
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}" />
+        {% for f in form %}
+        <p><label class="form-label__reg" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+        {% endfor %}
+        <p><button type="submit" class="reg-btn">Регистрация</button></p>
+    </form>
+</div>
+{% endblock %}

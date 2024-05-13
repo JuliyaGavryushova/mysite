@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block category %} {% endblock %}
+
+{% block content %}
+<div class="login center">
+    <h2>Авторизация</h2>
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+<!--        {{ form.as_p }}-->
+<!--        <button type="submit" class="login-btn">Войти</button>-->
+<!--    </form>-->
+    <form action="" method="post">
+        {% csrf_token %}
+        {% for f in form %}
+        <p><label class="form-label__log" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+        {% endfor %}
+        <p><button type="submit" class="login-btn">Войти</button></p>
+    </form>
+</div>
+{% endblock %}

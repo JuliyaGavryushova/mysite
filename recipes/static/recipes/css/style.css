@@ -1,0 +1,599 @@
+html, body {
+	font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.center {
+    padding-left: clamp(10px, 3vw, 35px);
+    padding-right: clamp(10px, 3vw, 35px);
+}
+
+img {max-width: 600px; height: auto;}
+
+img.img-recipe {
+	max-width: 300px;
+	height: auto;
+	float: left;
+	padding: 0 10px 10px 0;
+}
+
+img.img-recipe.thumb {
+	max-width: 150px;
+	height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 100px;
+    background-color: rgb(232, 227, 227);
+}
+
+ul.mainmenu li.logo {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin: 5px 40px 0 30px;
+}
+
+ul.mainmenu {
+	color: rgb(222, 89, 34);
+	font-size: 20px;
+	font-weight: 700;
+	overflow: hidden;
+}
+
+ul.mainmenu li {
+	float: left;
+	margin: 35px 40px 0 30px;
+}
+
+ul.mainmenu li.last {float: right;}
+
+ul.mainmenu li a {
+	color: rgb(222, 89, 34);
+}
+
+ul.mainmenu li a:hover {
+	color: rgb(238, 130, 11);
+}
+
+ul.category__ul {
+	color: rgb(222, 89, 34);
+	font-size: 20px;
+	overflow: hidden;
+}
+
+ul.category__ul li {
+	display: inline;
+	margin-left: 30px;
+}
+
+ul.category__ul li a {
+	color: rgb(222, 89, 34);
+}
+
+ul.category__ul li a:hover {
+	color: rgb(238, 130, 11);
+}
+
+.content-box {
+    width: 900px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.article {
+    background: rgb(239, 239, 239);
+    padding: 5px 10px 5px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: rgb(85, 85, 85);
+}
+
+.article p.first {
+    margin: 0;
+    float: left;
+}
+
+.article p.last {
+    margin: 0;
+    float: right;
+}
+
+.clear {
+    height: 50px;
+}
+
+.content__btn {
+    display: inline-flex;
+    cursor: pointer;
+    background-color: rgb(222, 89, 34);
+    border: none;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    font-size: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    float: right;
+}
+
+.content__btn a {
+    color: rgb(255, 255, 255);
+}
+
+.recipe {
+    width: 900px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.change__btn, .delete__btn {
+    display: inline-flex;
+    cursor: pointer;
+    background-color: rgb(222, 89, 34);
+    border: none;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    font-size: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-bottom: 30px;
+}
+
+.change__btn a {
+    color: rgb(255, 255, 255);
+}
+
+.change__btn {
+    margin-left: 20px;
+}
+
+.add-recipe {
+    margin-top: 30px;
+}
+
+.form-input {
+    width: 300px;
+    font-size: 16px;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 200px;
+    vertical-align: top;
+}
+
+.form-input__log {
+    width: 250px;
+    font-size: 16px;
+}
+
+.form-label__log {
+    display: inline-block;
+    min-width: 70px;
+    vertical-align: top;
+}
+
+.form-input__reg {
+    width: 250px;
+    font-size: 16px;
+}
+
+.form-label__reg {
+    display: inline-block;
+    min-width: 180px;
+    vertical-align: top;
+}
+
+.add-btn, .login-btn, .reg-btn {
+    display: inline-flex;
+    cursor: pointer;
+    background-color: rgb(222, 89, 34);
+    border: none;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    font-size: 15px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 950px) {
+
+    .header {
+        min-height: 100px;
+    }
+
+    ul.mainmenu li.logo {
+        font-size: 40px;
+        margin: 12px 40px 0 30px;
+    }
+
+    ul.mainmenu {
+        font-size: 18px;
+    }
+
+    ul.mainmenu li {
+        margin: 35px 26px 0 17px;
+    }
+
+    ul.category__ul {
+        font-size: 15px;
+    }
+
+    ul.category__ul li {
+        margin-left: 30px;
+    }
+
+    .content-box {
+        width: 700px;
+        margin-top: 30px;
+    }
+
+    .article {
+        padding: 5px 10px 5px 10px;
+    }
+
+    .clear {
+        height: 50px;
+    }
+
+    .content__btn {
+        border-radius: 30px;
+        padding: 10px 15px;
+        font-size: 15px;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+        margin-bottom: 10px;
+    }
+
+    .recipe {
+        width: 700px;
+        margin-top: 30px;
+    }
+
+    .change__btn, .delete__btn {
+        display: inline-flex;
+        cursor: pointer;
+        background-color: rgb(222, 89, 34);
+        border: none;
+        border-radius: 30px;
+        color: rgb(255, 255, 255);
+        padding: 10px 15px;
+        font-size: 15px;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-bottom: 30px;
+    }
+
+    .change__btn {
+        margin-left: 20px;
+    }
+
+    .add-recipe {
+        margin-top: 30px;
+    }
+
+    .form-input {
+        width: 300px;
+        font-size: 16px;
+    }
+
+    .form-label {
+        min-width: 200px;
+    }
+
+    .form-input__log {
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .form-label__log {
+        min-width: 70px;
+    }
+
+    .form-input__reg {
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .form-label__reg {
+        min-width: 180px;
+    }
+
+    .add-btn, .login-btn, .reg-btn {
+        display: inline-flex;
+        cursor: pointer;
+        background-color: rgb(222, 89, 34);
+        border: none;
+        border-radius: 30px;
+        color: rgb(255, 255, 255);
+        padding: 10px 15px;
+        font-size: 15px;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .header {
+        min-height: 77px;
+    }
+
+    ul.mainmenu li.logo {
+        font-size: 25px;
+        margin: 19px 8px 0 0px;
+    }
+
+    ul.mainmenu {
+        font-size: 12px;
+    }
+
+    ul.mainmenu li {
+        margin: 35px 6px 0 5px;
+    }
+
+    ul.category__ul {
+        font-size: 12px;
+    }
+
+    ul.category__ul li {
+        margin-left: 10px;
+    }
+
+    .content-box {
+        width: 400px;
+        margin-top: 20px;
+    }
+
+    .content-box h2 {
+        font-size: 16px;
+    }
+
+    .content-box p {
+        font-size: 14px;
+    }
+
+    .article {
+        padding: 5px 10px 5px 10px;
+        font-size: 12px;
+    }
+
+    .clear {
+        height: 40px;
+    }
+
+    .content__btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .recipe {
+        width: 392px;
+        margin-top: 20px;
+    }
+
+    .recipe h2 {
+        font-size: 18px;
+    }
+
+    .change__btn, .delete__btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .change__btn {
+        margin-left: 20px;
+    }
+
+    .add-recipe {
+        margin-top: 30px;
+    }
+
+    .form-input {
+        width: 300px;
+        font-size: 16px;
+    }
+
+    .form-label {
+        min-width: 200px;
+    }
+
+    .form-input__log {
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .form-label__log {
+        min-width: 70px;
+    }
+
+    .form-input__reg {
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .form-label__reg {
+        min-width: 180px;
+    }
+
+    .add-btn, .login-btn, .reg-btn {
+        display: inline-flex;
+        cursor: pointer;
+        background-color: rgb(222, 89, 34);
+        border: none;
+        border-radius: 30px;
+        color: rgb(255, 255, 255);
+        padding: 10px 15px;
+        font-size: 15px;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+        margin-bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+
+    .login h2 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 424px) {
+
+    .header {
+        min-height: 65px;
+    }
+
+    ul.mainmenu li.logo {
+        font-size: 20px;
+        margin: 20px 6px 0 0px;
+    }
+
+    ul.mainmenu {
+        font-size: 9px;
+    }
+
+    ul.mainmenu li {
+        margin: 35px 6px 0 5px;
+    }
+
+    ul.category__ul {
+        font-size: 9px;
+    }
+
+    ul.category__ul li {
+        margin-left: 7px;
+    }
+
+    .content-box {
+        width: 300px;
+        margin-top: 10px;
+    }
+
+    .content-box h2 {
+        font-size: 12px;
+    }
+
+    .content-box p {
+        font-size: 8px;
+    }
+
+    .article {
+        padding: 5px 10px 5px 10px;
+        font-size: 9px;
+    }
+
+    .clear {
+        height: 40px;
+    }
+
+    .content__btn {
+        padding: 6px 10px;
+        font-size: 9px;
+    }
+
+    .recipe {
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    .recipe h2 {
+        font-size: 15px;
+    }
+
+    .recipe h4 {
+        font-size: 13px;
+    }
+
+    .recipe p {
+        font-size: 10px;
+    }
+
+    .change__btn, .delete__btn {
+        padding: 6px 10px;
+        font-size: 9px;
+        margin-bottom: 30px;
+    }
+
+    .change__btn {
+        margin-left: 20px;
+    }
+
+    .add-recipe {
+        margin-top: 13px;
+    }
+
+    .add-recipe h2 {
+        font-size: 14px;
+    }
+
+    .form-input {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    .form-label {
+        min-width: 200px;
+    }
+
+    .form-input__log {
+        width: 250px;
+        font-size: 14px;
+    }
+
+    .form-label__log {
+        min-width: 70px;
+    }
+
+    .form-input__reg {
+        width: 250px;
+        font-size: 14px;
+    }
+
+    .form-label__reg {
+        min-width: 180px;
+    }
+
+    .add-btn, .login-btn, .reg-btn {
+        padding: 6px 10px;
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .login h2 {
+        font-size: 14px;
+    }
+
+    .registration h2 {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
